@@ -5,10 +5,11 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/janlionly/UEIoTBLEKit_iOS_SDK"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "janlionly" => "812167414@qq.com" }
-  s.source       = { :git => "https://github.com/janlionly/UEIoTBLEKit_iOS_SDK", :tag => s.version }
+  s.source       = { :http => "https://github.com/janlionly/UEIoTBLEKit_iOS_SDK" }
   s.requires_arc = true
   s.platform     = :ios
-  s.framework    = 'CoreBluetooth'
+  s.frameworks    = 'CoreBluetooth', 'CommonCrypto'
   s.ios.deployment_target = '9.0'
-  s.vendored_frameworks ='UEIoTBLEKit.framework'
+  s.preserve_paths = 'Frameworks/UEIoTBLEKit.framework'
+  s.vendored_frameworks ='Frameworks/UEIoTBLEKit.framework'
 end
